@@ -4,7 +4,7 @@ const producten = [
     categorie: "bank",
     prijs: 499.99,
     omschrijving: "Comfortabele leren bank met een luxe uitstraling.",
-    afbeelding: "img/leren-bank.jpeg"
+    afbeelding: "img/Leren-bank.jpeg"
   },
   {
     naam: "Hoek Bank",
