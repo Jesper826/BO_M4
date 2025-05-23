@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Producten - Meubel Webshop</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="./js/main.js" defer></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <header>
+    <button id="darkmode-toggle" aria-label="Toggle dark mode">🌙</button>
+    <h1>Onze Meubels</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="producten.html">Producten</a>
+    </nav>
+    <button id="open-cart-btn" class="cart-icon-btn">
+      <i class="fas fa-shopping-cart"></i>
+    </button>
+  </header>
+
+<main>
+  <div id="filter-container">
+    <label for="filter">Filter op categorie:</label>
+    <select id="filter">
+      <option value="alles">Alles</option>
+      <option value="bank">Banken</option>
+      <option value="tafel">Tafels</option>
+      <option value="stoel">Stoelen</option>
+    </select>
+    <input type="text" id="search" placeholder="Zoek product...">
+  </div>
+
+  <h1>Onze Meubels</h1>
+  <div id="product-container"></div>
+</main>
+
+
+  <div id="winkelwagen-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" id="close-cart-btn">&times;</span>
+      <h2>Winkelwagen</h2>
+      <ul id="cart-items"></ul>
+      <p id="totaal">Totaal: €0.00</p>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 Meubel Webshop</p>
+  </footer>
+</body>
+</html>
