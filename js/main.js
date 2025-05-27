@@ -1,43 +1,36 @@
 const producten = [
   {
-    naam: "Leren Bank",
+    naam: "Tweede hands hoek Bank",
     categorie: "bank",
-    prijs: 499.99,
-    omschrijving: "Comfortabele leren bank met een luxe uitstraling.",
-    afbeelding: "img/Leren-bank.jpeg"
-  },
-  {
-    naam: "Hoek Bank",
-    categorie: "bank",
-    prijs: 499.99,
+    prijs: 201.00,
     omschrijving: "Ruime hoekbank voor een gezellige woonkamer.",
     afbeelding: "img/hoek-bank.jpeg"
   },
   {
-    naam: "Rechte Bank",
+    naam: "Tweede hands rechte Bank",
     categorie: "bank",
-    prijs: 499.99,
+    prijs: 240.00,
     omschrijving: "Stijlvolle rechte bank met een moderne uitstraling.",
     afbeelding: "img/rechte-bank.jpeg"
   },
   {
-    naam: "Modulaire Bank",
+    naam: "Tweede hands modulaire Bank",
     categorie: "bank",
-    prijs: 499.99,
+    prijs: 399.99,
     omschrijving: "Comfortabele leren bank met een luxe uitstraling.",
     afbeelding: "img/modulaire-bank.jpeg"
   },
   {
-    naam: "Eettafel Hout",
+    naam: "Zelf gemaakte eettafel Hout",
     categorie: "tafel",
     prijs: 299.99,
     omschrijving: "Stevige eettafel van massief hout, ideaal voor het gezin.",
     afbeelding: "img/Eettafel-Hout.webp"
   },
   {
-    naam: "Vierkante eettafel",
+    naam: "Zelf gemaakte vierkante eettafel",
     categorie: "tafel",
-    prijs: 299.99,
+    prijs: 199.99,
     omschrijving: "Stevige eettafel van massief hout, ideaal voor het gezin.",
     afbeelding: "img/vierkante-eettafel.jpeg"
   },
@@ -69,13 +62,6 @@ const producten = [
     prijs: 89.99,
     omschrijving: "Basisstoel met wieltjes en verstelbare hoogte.",
     afbeelding: "img/standaard-bureaustoel.jpeg"
-  },
-  {
-    naam: "Directiestoel",
-    categorie: "stoel",
-    prijs: 89.99,
-    omschrijving: "Stijlvolle directiestoel met leren bekleding.",
-    afbeelding: "img/Directiestoel.jpeg"
   },
   {
     naam: "Gamestoel",
@@ -171,7 +157,7 @@ const deals = [
   },
   {
     naam: "Wit Hoek Bank",
-    prijs: 35,
+    prijs: 150,
     omschrijving: "Ruime hoekbank voor een gezellige woonkamer.",
     afbeelding: "img/Wit-hoek-bank.jpeg"
   }
