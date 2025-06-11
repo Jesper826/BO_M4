@@ -88,7 +88,7 @@ function toonProducten(productLijst) {
     const card = document.createElement("div");
     card.className = "product-card";
     card.innerHTML = `
-      <img src="${product.afbeelding}" alt="${product.naam}">
+      <img src="${product.afbeelding}" alt="Goedkope ${product.naam} - betaalbare meubels">
       <h3>${product.naam}</h3>
       <p>€${product.prijs.toFixed(2)}</p>
       <p>${product.omschrijving}</p>
