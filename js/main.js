@@ -1,16 +1,16 @@
 const producten = [
   {
-    naam: "Tweede hands hoek Bank",
+    naam: "Goedkope hoek Bank",
     categorie: "bank",
     prijs: 201.00,
-    omschrijving: "Ruime hoekbank voor een gezellige woonkamer.",
+    omschrijving: "Ruime, goedkope hoekbank voor een gezellige woonkamer. Betaalbare meubels voor elk interieur.",
     afbeelding: "img/hoek-bank.jpeg"
   },
   {
-    naam: "Tweede hands rechte Bank",
+    naam: "Betaalbare rechte Bank",
     categorie: "bank",
     prijs: 240.00,
-    omschrijving: "Stijlvolle rechte bank met een moderne uitstraling.",
+    omschrijving: "Stijlvolle rechte bank met een moderne uitstraling. Een goedkope bank voor elk budget.",
     afbeelding: "img/rechte-bank.jpeg"
   },
   {
@@ -69,6 +69,13 @@ const producten = [
     prijs: 89.99,
     omschrijving: "Comfortabele gamestoel met verstelbare armleuningen.",
     afbeelding: "img/Gamestoel.jpeg"
+  },
+  {
+    naam: "kantoorstoel",
+    categorie: "stoel",
+    prijs: 78.02,
+    omschrijving:"Comfortabele kantoorstoel met een modern design.",
+    afbeelding: "img/directiestoel.jpeg"
   }
 
 ];
@@ -88,12 +95,12 @@ function toonProducten(productLijst) {
     const card = document.createElement("div");
     card.className = "product-card";
     card.innerHTML = `
-      <img src="${product.afbeelding}" alt="Goedkope ${product.naam} - betaalbare meubels">
-      <h3>${product.naam}</h3>
-      <p>€${product.prijs.toFixed(2)}</p>
-      <p>${product.omschrijving}</p>
-      <button onclick="addToCart('${product.naam}', ${product.prijs})">Voeg toe</button>
-    `;
+  <img src="${product.afbeelding}" alt="Goedkope ${product.naam} - betaalbare meubels">
+  <h3>${product.naam}</h3>
+  <p>€${product.prijs.toFixed(2)}</p>
+  <p>${product.omschrijving}</p>
+  <button onclick="addToCart('${product.naam}', ${product.prijs})">Voeg toe</button>
+`;
     productContainer.appendChild(card);
   });
 }
