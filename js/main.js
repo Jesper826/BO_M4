@@ -7,20 +7,6 @@ const producten = [
     afbeelding: "img/hoek-bank.jpeg"
   },
   {
-    naam: "Betaalbare rechte Bank",
-    categorie: "bank",
-    prijs: 240.00,
-    omschrijving: "Stijlvolle rechte bank met een moderne uitstraling. Een goedkope bank voor elk budget.",
-    afbeelding: "img/rechte-bank.jpeg"
-  },
-  {
-    naam: "Tweede hands modulaire Bank",
-    categorie: "bank",
-    prijs: 399.99,
-    omschrijving: "Comfortabele leren bank met een luxe uitstraling.",
-    afbeelding: "img/modulaire-bank.jpeg"
-  },
-  {
     naam: "Zelf gemaakte eettafel Hout",
     categorie: "tafel",
     prijs: 299.99,
@@ -28,56 +14,13 @@ const producten = [
     afbeelding: "img/Eettafel-Hout.webp"
   },
   {
-    naam: "Zelf gemaakte vierkante eettafel",
-    categorie: "tafel",
-    prijs: 199.99,
-    omschrijving: "Stevige eettafel van massief hout, ideaal voor het gezin.",
-    afbeelding: "img/vierkante-eettafel.jpeg"
-  },
-  {
-    naam: "Ronde eettafel",
-    categorie: "tafel",
-    prijs: 299.99,
-    omschrijving: "Stevige eettafel van massief hout, ideaal voor het gezin.",
-    afbeelding: "img/ronde-eettafel.jpeg"
-  },
-  {
-    naam: "Ovale eettafel",
-    categorie: "tafel",
-    prijs: 299.99,
-    omschrijving: "Stevige eettafel van massief hout, ideaal voor het gezin.",
-    afbeelding: "img/ovale-eettafel.jpeg"
-  },
-
-  {
     naam: "Bureaustoel",
     categorie: "stoel",
     prijs: 89.99,
     omschrijving: "Ergonomische bureaustoel voor thuis of kantoor.",
     afbeelding: "img/Bureaustoel.jpeg"
-  },
-  {
-    naam: "Standaard bureaustoel",
-    categorie: "stoel",
-    prijs: 89.99,
-    omschrijving: "Basisstoel met wieltjes en verstelbare hoogte.",
-    afbeelding: "img/standaard-bureaustoel.jpeg"
-  },
-  {
-    naam: "Gamestoel",
-    categorie: "stoel",
-    prijs: 89.99,
-    omschrijving: "Comfortabele gamestoel met verstelbare armleuningen.",
-    afbeelding: "img/Gamestoel.jpeg"
-  },
-  {
-    naam: "kantoorstoel",
-    categorie: "stoel",
-    prijs: 78.02,
-    omschrijving:"Comfortabele kantoorstoel met een modern design.",
-    afbeelding: "img/directiestoel.jpeg"
   }
-
+  
 ];
 
 const productContainer = document.getElementById("product-container");
@@ -92,15 +35,20 @@ const filter = document.getElementById("filter");
 function toonProducten(productLijst) {
   productContainer.innerHTML = "";
   productLijst.forEach(product => {
+    const detailPage = "producten/" + product.naam
+      .toLowerCase()
+      .replace(/ /g, "-")
+      .replace(/[^\w-]+/g, "") + ".html";
     const card = document.createElement("div");
     card.className = "product-card";
     card.innerHTML = `
-  <img src="${product.afbeelding}" alt="Goedkope ${product.naam} - betaalbare meubels">
-  <h3>${product.naam}</h3>
-  <p>€${product.prijs.toFixed(2)}</p>
-  <p>${product.omschrijving}</p>
-  <button onclick="addToCart('${product.naam}', ${product.prijs})">Voeg toe</button>
-`;
+      <img src="${product.afbeelding}" alt="Goedkope ${product.naam} - betaalbare meubels">
+      <h3>${product.naam}</h3>
+      <p>€${product.prijs.toFixed(2)}</p>
+      <p>${product.omschrijving}</p>
+      <button onclick="addToCart('${product.naam}', ${product.prijs})">Voeg toe</button>
+      <a href="${detailPage}" class="details-btn">Bekijk details</a>
+    `;
     productContainer.appendChild(card);
   });
 }
